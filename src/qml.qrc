@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>DarkButton.qml</file>
+        <file>functions.js</file>
+    </qresource>
+</RCC>
