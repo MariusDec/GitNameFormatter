@@ -6,7 +6,7 @@ function formatGitBranchName(prefix, text, textbox) {
         return;
     }
 
-    textbox.text = (prefix + "-" + text).replace(/-/g, ' ').replace(/\s{2,}/g, ' ').trim().replace(/\s/g, '-').toLowerCase();
+    textbox.text = (prefix + "-" + text).replace(/-/g, ' ').replace(/\s{2,}/g, ' ').trim().replace(/\s/g, '-').toLowerCase().replace(/BPRX/ig, 'BPRX').replace(/BPRO/ig, 'BPRO');
 }
 
 function formatTaskName(prefix, text, textbox) {
@@ -15,7 +15,10 @@ function formatTaskName(prefix, text, textbox) {
         return;
     }
 
-    textbox.text = (prefix + ": " + text).replace(/-/g, ' ').replace(/\s{2,}/g, ' ').replace(/(BPRX|BPRO) (\d{3,5})/g, '$1-$2').replace(/((BPRX|BPRO)-\d{3,5})(\s*)(?=[^-])/g, '$1 - ').trim();
+    textbox.text = (prefix + ": " + text).replace(/-/g, ' ').replace(/\s{2,}/g, ' ')
+        .replace(/(BPRX|BPRO) (\d{2,5})/ig, '$1-$2')
+        .replace(/((BPRX|BPRO)-\d{2,5})(\s*)(?=[^-])/ig, '$1 - ')
+        .replace(/BPRX/ig, 'BPRX').replace(/BPRO/ig, 'BPRO').trim();
 }
 
 function formatToPlainText(text, textbox) {
@@ -24,5 +27,8 @@ function formatToPlainText(text, textbox) {
         return;
     }
 
-    textbox.text = text.replace(/-/g, ' ').replace(/\s{2,}/g, ' ').replace(/(BPRX|BPRO) (\d{3,5})/g, '$1-$2').replace(/((BPRX|BPRO)-\d{3,5})(\s*)(?=[^-])/g, '$1 - ').trim();
+    textbox.text = text.replace(/-/g, ' ').replace(/\s{2,}/g, ' ')
+        .replace(/(BPRX|BPRO) (\d{2,5})/ig, '$1-$2')
+        .replace(/((BPRX|BPRO)-\d{2,5})(\s*)(?=[^-])/ig, '$1 - ')
+        .replace(/BPRX/ig, 'BPRX').replace(/BPRO/ig, 'BPRO').trim();
 }
