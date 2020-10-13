@@ -51,8 +51,8 @@ Source: "C:\Users\mariu\Desktop\Projects\GitNameFormatter\release\release\New fo
 Source: "C:\Users\mariu\Desktop\Projects\GitNameFormatter\release\release\New folder\Qt5Quick.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\mariu\Desktop\Projects\GitNameFormatter\release\release\New folder\Qt5QuickControls2.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\mariu\Desktop\Projects\GitNameFormatter\release\release\New folder\Qt5QuickTemplates2.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\mariu\Desktop\Projects\GitNameFormatter\release\release\New folder\platforms\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Users\mariu\Desktop\Projects\GitNameFormatter\release\release\New folder\qml\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\mariu\Desktop\Projects\GitNameFormatter\release\release\New folder\platforms\*"; DestDir: "{app}\platforms"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\mariu\Desktop\Projects\GitNameFormatter\release\release\New folder\qml\*"; DestDir: "{app}\qml"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
